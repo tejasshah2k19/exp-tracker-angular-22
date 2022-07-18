@@ -1,0 +1,56 @@
+ng new projectname
+
+ng serve 
+ng serve --open 
+
+ng s 
+ng s --o 
+
+spa -> single page application --> .html 
+                index.html 
+
+Login.html
+Signup.html 
+ForgetPassword.html 
+
+SPA vs MPA
+
+angular spa 
+hot reload
+
+.ts 
+
+
+component
+
+ng generate component signup
+
+ng g c signup
+
+1) signup.component.ts 
+2) signup.component.html 
+3) signup.component.css
+4) signup.component.spec.ts 
+
+
+app component -- parent component --> index.html load 
+
+<app-root></app-root>
+
+component is a class 
+
+
+@Component({
+    templateUrl:"abc.html"
+})
+class SignupComponent{
+    
+    let name;
+} 
+
+
+to load specific component we need to map this component with url-routes 
+
+/signup
+/login
+
