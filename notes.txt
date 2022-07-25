@@ -55,3 +55,18 @@ to load specific component we need to map this component with url-routes
 /login
 
 login --> email and password input 
+------------------------------
+service --> class --> logic [db third ]
+
+
+ng g service 
+ng g s 
+
+ng g s session
+    login
+    signup
+    forgetpassword
+
+
+
+

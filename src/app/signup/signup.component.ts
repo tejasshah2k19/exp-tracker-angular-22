@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +17,7 @@ export class SignupComponent implements OnInit {
   firstNameError = ""
   emailError = "" 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private sessionService:SessionService) { }
 
   ngOnInit(): void {
     console.log("Signup....component....");    
@@ -52,6 +53,21 @@ export class SignupComponent implements OnInit {
       
     }else{
       //login   
+
+      //api call 
+      //service -- api call -- logic 
+
+      let data = {
+        "firstName":this.firstName,
+        "email":this.email,
+        "password":this.password,
+        "lastName":this.lastName,
+        "role":"62b9c4ee405221ef911914ef"
+      }
+       this.sessionService.signupApi(data).subscribe(resp=>{
+          console.log("api response ");
+          console.log(resp);
+       });
       this.router.navigateByUrl("/login");
 
     }
